@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  color: #e1e1e1;
+  max-width: 540px;
+  margin-inline: auto;
+  min-height: 100svh;
+  padding-block: 5rem;
+  font: 400 16px/1.4 "Roboto", sans-serif;
+  background-color: #292240;
+}
+
+article {
+  padding-block: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 6px #2d2d2d;
+  background-color: #1e1a36;
+}
+
+section {
+  padding: 1.5rem;
+}
+
+section:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+section h4 + ul.flex {
+  padding-top: 0.5rem;
+}
+
+section h4 + ul.flex li {
+  font-weight: 200;
+  padding: 0.35rem 0.75rem;
+  box-shadow: inset 0 0 2px #797777;
+}
+
+section h4 + ul.flex li:hover {
+  color: #fff;
+  box-shadow: inset 0 0 2px #f4f2f2;
+}
+
+section img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transform: scaleX(-1);
+}
+
+svg {
+  width: 100%;
+  fill: #e1e1e1;
+  max-width: 1.75rem;
+}
+
+svg:hover {
+  fill: #fff;
+}
+
+.social-links,
+.user-bio > p + p {
+  padding-top: 1.5rem;
+}
+
+.flex {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 480px) {
+  section:first-child .justify-between {
+    flex-direction: column;
+    border: 2px solid red;
+    justify-content: center;
+  }
+}
