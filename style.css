@@ -92,4 +92,12 @@ svg:hover {
     text-align: center;
     justify-content: center;
   }
+  body{
+    padding-block: 0;
+    background-color: #1e1a36;
+  }
+  article {
+  border-radius: 0;
+  box-shadow: 0;
+  }
 }
