@@ -8,8 +8,12 @@
   box-sizing: border-box;
 }
 
+a,
 body {
   color: #e1e1e1;
+}
+
+body {
   max-width: 540px;
   margin-inline: auto;
   min-height: 100svh;
@@ -66,6 +70,7 @@ svg:hover {
   fill: #fff;
 }
 
+.pages,
 .social-links,
 .user-bio > p + p {
   padding-top: 1.5rem;
@@ -92,12 +97,12 @@ svg:hover {
     text-align: center;
     justify-content: center;
   }
-  body{
+  body {
     padding-block: 0;
     background-color: #1e1a36;
   }
   article {
-  border-radius: 0;
-  box-shadow: 0;
+    border-radius: 0;
+    box-shadow: 0;
   }
 }
