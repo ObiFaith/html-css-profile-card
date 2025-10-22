@@ -3,6 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  outline: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -22,15 +23,54 @@ body {
   background-color: #292240;
 }
 
-article {
+[data-testid="test-profile-card"],
+[data-testid="test-about-page"]{
   padding-block: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6px #2d2d2d;
   background-color: #1e1a36;
 }
 
+input,
+textarea,
+form button {
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  font: 400 16px/1.4 "Roboto", sans-serif;
+}
+
+svg,
+input,
+textarea,
+form button,
+[data-testid="test-profile-card"] {
+  width: 100%;
+}
+
+form,
 section {
   padding: 1.5rem;
+}
+
+form button {
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+form div + div {
+  padding-top: 1.5rem;
+}
+
+.error,
+form label {
+  margin-bottom: 0.35rem;
+}
+
+form label {
+  font-weight: 600;
+  display: inline-block;
 }
 
 section:last-child {
@@ -61,7 +101,6 @@ section img {
 }
 
 svg {
-  width: 100%;
   fill: #e1e1e1;
   max-width: 1.75rem;
 }
@@ -76,6 +115,18 @@ svg:hover {
   padding-top: 1.5rem;
 }
 
+.pages a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: rgb(255, 50, 50);
+}
+
+.success {
+  color: rgb(2, 255, 2);
+}
+
 .flex {
   gap: 1rem;
   display: flex;
@@ -83,11 +134,17 @@ svg:hover {
   align-items: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
-.text-sm {
+.error,
+.text-sm,
+form label {
   font-size: 0.8rem;
 }
 

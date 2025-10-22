@@ -4,22 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Faith Obi | HNG FE Stage 1</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="flex">
-    <form data-testid="test-profile-card">
-      <div class="">
-        <label for="fullName">Full Name</label>
-        <input data-testid="test-contact-name" type="text" />
-      </div>
-      <div class="">
-        <label for="email">Email</label>
-        <input data-testid="test-contact-email" type="email" />
-      </div>
-      <div class="">
-        <label for="">Enter Message</label>
-        <textarea name="subject" data-testid="test-contact-email"></textarea>
-      </div>
-      <button data-testid="test-contact-submit" type="submit">Submit</button>
-    </form>
+    <section data-testid="test-profile-card">
+      <h2 class="text-center">Contact Form</h2>
+      <form>
+        <p class="success text-center" data-testid="test-contact-success"></p>
+        <div>
+          <label for="name">Full Name</label>
+          <p class="error" data-testid="test-contact-error-name"></p>
+          <input
+            id="name"
+            name="name"
+            required
+            data-testid="test-contact-name"
+            type="text"
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <p class="error" data-testid="test-contact-error-email"></p>
+          <input
+            id="email"
+            name="email"
+            required
+            data-testid="test-contact-email"
+            type="email"
+          />
+        </div>
+        <div>
+          <label for="subject">Enter Message</label>
+          <p class="error" data-testid="test-contact-error-message"></p>
+          <textarea
+            rows="7"
+            id="subject"
+            name="subject"
+            data-testid="test-contact-message"
+          ></textarea>
+        </div>
+        <button data-testid="test-contact-submit" type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="./js/form.js"></script>
   </body>
 </html>
